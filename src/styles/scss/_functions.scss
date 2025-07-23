@@ -1,0 +1,33 @@
+@function adjust-color($color) {
+    @if lightness($color) > 70% {
+        @return darken($color, 20%);
+    }
+    @else if lightness($color) < 30% {
+        @return lighten($color, 10%);
+    }
+    @else {
+        @return $color;
+    }
+}
+$value: (1, 2, 3, 4, 5);
+@each $val in $value {
+    .m-#{$val} {
+        margin: $val;
+    }
+}
+$colors: red, green, blue;
+@each $color in $colors {
+    .text-#{$color} {
+        color: $color;
+    }
+}
+$sizes: (
+        small: 12px,
+        medium: 16px,
+        large: 24px
+);
+@each $name, $size in $sizes {
+    .font-#{$name} {
+        font-size: $size;
+    }
+}

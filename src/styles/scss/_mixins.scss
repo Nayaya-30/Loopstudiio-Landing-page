@@ -1,0 +1,25 @@
+@mixin flexCenter($direction, $gap) {
+    display: flex;
+    //flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    gap: $gap;
+}
+@mixin flexBetween($justify, $gap) {
+    display: flex;
+    //flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: row;
+    gap: $gap;
+}
+@mixin side() {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+@mixin logoHover() {
+    transform: scale(1);
+    filter: brightness(0) saturate(100%) invert(22%) sepia(98%) saturate(7460%) hue-rotate(359deg) brightness(104%) contrast(105%);
+}
